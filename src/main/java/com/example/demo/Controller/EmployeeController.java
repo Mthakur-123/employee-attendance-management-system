@@ -21,7 +21,7 @@ public class EmployeeController {
 	private EmployeeService service;
 	
 	@Autowired
-	private LocationService laLocationService;
+	private LocationService locationservice;
 	
 	@Autowired
 	private AttendanceService attendanceService;
@@ -43,7 +43,7 @@ public class EmployeeController {
 	        return "Invalid employee";
 	    
 	    }
-	    boolean withinRange = laLocationService.isWithinOfficeRange(
+	    boolean withinRange = locationservice.isWithinOfficeRange(
 	            request.getLatitude(),
 	            request.getLongitude());
 

@@ -22,16 +22,14 @@ public class admincontroller {
 
 	@Autowired
 	private EmployeeService employeeService;
-//	@Autowired
-//	EmployeeRepo employeeRepo;
+	
 	@Autowired
 	private LocationService locationService;
 	
 	@PostMapping("/addEmployee")
     public Employee addEmployee(@RequestBody Employee employee) {
-		System.out.println(employee);
-//		Employee employee2 = new Employee();
-//		employee2.set
+	
+
        return employeeService.save(employee);
        
     }
@@ -42,6 +40,7 @@ public class admincontroller {
 	       return locationService.saveOfficeLocation(location);
 	       
 	    }
+	 
 	 @GetMapping("/attendanceReport")
 	    public List<Attendance> attendanceReport() {
 	        return employeeService.getAllAttendance();

@@ -21,7 +21,7 @@ public class EmployeeService {
 	private AttendanceRepo attendanceRepo;
 
 	 public Employee save(Employee employee) {
-//	        repo.save(employee);
+       
 	        System.out.println(employee);
 	        return  repo.save(employee);
 	    }
@@ -35,5 +35,6 @@ public class EmployeeService {
 	        return attendanceRepo.findAll();
 	    }
 	
+	    
   
 }
